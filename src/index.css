@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+@font-face {
+  font-family: "BalginCondensed";
+  src: url("./assets/font/balgin-regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
