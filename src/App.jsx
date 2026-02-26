@@ -136,7 +136,7 @@ const App = () => {
             
             <div className="flex justify-center">
               <img src={aboutMe} alt="About Me"
-                className="w-96 h-130 shadow-2xs object-cover"/>
+                className="w-80 h-60 md:w-96 md:h-130 shadow-2xs object-cover"/>
             </div>
 
             <div className="flex-1 w-full sm:w-auto flex flex-col items-start">
@@ -146,7 +146,7 @@ const App = () => {
                 ABOUT ME
               </h2>
 
-              <p className="text-sm sm:text-base md:text-sm text-[#1e2950] leading-relaxed text-justify mb-4 sm:mb-6">
+              <p className="text-sm sm:text-base md:text-1xl text-[#1e2950] leading-relaxed text-justify mb-4 sm:mb-6">
                 My name is <span className="font-bold text-[#447da6]">Desiree Joice F. Boo</span>, a fourth-year <span className="font-bold text-[#447da6]">Bachelor of Science in Computer Science</span> student majoring 
                 in Data Science at the University of Southeastern Philippines. My academic journey has shaped a flexible skill 
                 set that moves between data analysis, machine learning, data visualization, frontend development, and UX 
@@ -157,11 +157,10 @@ const App = () => {
                 data scientist, contributing analytics-driven, well-designed solutions to real-world projects.
               </p>
               
-              <div className="flex flex-col md:flex-row md:items-start md:gap-20">
+              <div className="flex flex-col md:flex-row md:items-start md:gap-20 md:mt-15">
 
-                {/* Contact Me */}
-                <div className="flex flex-col gap-3">
-                  <p className="text-[#1e2950] text-xl font-bold">Contact Me</p>
+                <div className="flex flex-col gap-3 mt-10 md:mt-0">
+                  <p className="text-[#1e2950] text-1xl md:text-xl font-bold">Contact Me</p>
 
                   <div className="flex items-center gap-2">
                     <img src={email} alt="Email" className="w-9 h-9 object-cover"/>
@@ -174,33 +173,30 @@ const App = () => {
                   </div>
                 </div>
 
-                {/* Divider (hidden on mobile) */}
-                <div className="hidden md:block border-l-2 border-[#1e2950] h-full"></div>
+                <div className="hidden md:block border-l-2 border-[#04060c] h-full"></div>
 
-                {/* Connect With Me */}
-                <div className="flex flex-col gap-3">
-                  <p className="text-[#1e2950] text-xl font-bold">Connect With Me</p>
+                <div className="flex flex-col gap-3 mt-10 md:mt-0">
+                  <p className="text-[#1e2950] text-1xl md:text-xl font-bold">Connect With Me</p>
 
-                  {/* Social grid */}
                   <div className="grid grid-cols-2 gap-x-6 gap-y-3">
                     <a href="https://www.linkedin.com/in/desiree-joice-boo-1082183a4/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:underline">
                       <img src={linkedin} alt="LinkedIn" className="w-9 h-9"/>
-                      <span className="text-[#1e2950]">LinkedIn</span>
+                      <span className="text-[#1e2950] md:text-2xl">LinkedIn</span>
                     </a>
 
                     <a href="https://medium.com/@djfboo00089" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:underline">
                       <img src={medium} alt="Medium" className="w-9 h-9"/>
-                      <span className="text-[#1e2950]">Medium</span>
+                      <span className="text-[#1e2950] md:text-2xl">Medium</span>
                     </a>
 
                     <a href="https://github.com/ddesiree" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:underline">
                       <img src={github} alt="GitHub" className="w-9 h-9"/>
-                      <span className="text-[#1e2950]">GitHub</span>
+                      <span className="text-[#1e2950] md:text-2xl">GitHub</span>
                     </a>
 
                     <a href="https://www.facebook.com/desireejoice.boo" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:underline">
                       <img src={facebook} alt="Facebook" className="w-9 h-9"/>
-                      <span className="text-[#1e2950]">Facebook</span>
+                      <span className="text-[#1e2950] md:text-2xl">Facebook</span>
                     </a>
                   </div>
                 </div>
@@ -210,18 +206,35 @@ const App = () => {
             </div>
           </div>
           
-          <div className="flex flex-row items-center gap-60 mt-20">
-            <div className="relative z-0 inline-block pl-30">
-              <img src={gradient2} alt="Gradient2" className="absolute left-70 -top-70 -translate-x-1/2 
-                                                              w-[600px] h-[650px] object-contain -z-10"/>
-              <p className="relative z-10 text-[#1e2950] text-1l text-center"><span className="italic">Oh,</span> I also have a cat. Her name's Gubi.</p>
+          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-60 mt-20 px-4">
+
+            <div className="relative z-0 text-center md:text-left max-w-md">
+              <img 
+                src={gradient2} 
+                alt="Gradient2"
+                className="hidden md:block absolute left-1/2 -top-40 -translate-x-1/2 h-[400px] object-contain -z-10"
+              />
+
+              <p className="relative z-10 text-[#1e2950] text-base md:text-lg leading-relaxed md:ml-15">
+                <span className="italic">Oh,</span> I also have a cat. Her name's Gubi.
+              </p>
             </div>
-            
-            <div className="flex flex-row gap-6">
-              <img src={gubi1} alt="Gubi1" className="w-70 h-80 shadow-2xs object-cover"/>
-              <img src={gubi2} alt="Gubi2" className="w-70 h-80 shadow-2xs object-cover"/>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <img 
+                src={gubi1} 
+                alt="Gubi1" 
+                className="w-60 h-72 md:w-70 md:h-80 shadow-2xs object-cover"
+              />
+              <img 
+                src={gubi2} 
+                alt="Gubi2" 
+                className="w-60 h-72 md:w-70 md:h-80 shadow-2xs object-cover"
+              />
             </div>
+
           </div>
+
         </div>
 
       </div>
