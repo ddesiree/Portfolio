@@ -81,19 +81,18 @@ const NavBar = () => {
     }
   };
 
-  {/* Resume button */}
   return (
     <nav
       className={`
-        fixed top-3 left-1/2 -translate-x-1/2
+        absolute top-0 left-0 w-full flex justify-center
         z-50
         transition-all duration-300 ease-in-out
         ${showNav ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-6 pointer-events-none"}
       `}
     >
 
-      <div className="bg-[#ececf4] backdrop-blur-md shadow-md rounded-full px-6 py-2">
-        <ul className="flex justify-center gap-5 py-4 px-4 list-none">
+      <div className="mt-4 bg-[#ececf4]/80 backdrop-blur-md shadow-md rounded-full px-4 md:px-6 py-1.5 md:py-2">
+        <ul className="flex flex-nowrap justify-center gap-2 md:gap-5 py-2 md:py-3 px-2 md:px-4 list-none text-[10px] md:text-sm">
           {navItems.map((item) => {
             const isResume = item === "Resume";
             const isActive = active === item;
@@ -105,13 +104,7 @@ const NavBar = () => {
                     href="https://drive.google.com/file/d/1NDf0k9mig2D8vbrb3Qaw1uTZxBnfMlI1/view?usp=drive_link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="
-                      uppercase cursor-pointer
-                      rounded-full
-                      transition-all duration-300 ease-in-out
-                      px-4 py-2.5
-                      bg-[#447da6] text-white
-                    "
+                    className="uppercase cursor-pointer rounded-full transition-all duration-300 ease-in-out px-3 md:px-4 py-1.5 md:py-2 bg-[#447da6] text-white text-[10px] md:text-sm whitespace-nowrap"
                   >
                     {item}
                   </a>
@@ -122,12 +115,14 @@ const NavBar = () => {
                       uppercase cursor-pointer
                       rounded-full
                       transition-all duration-300 ease-in-out
-                      px-3 py-1.5
+                      px-2 md:px-3
+                      py-1 md:py-1.5
                       text-[#1e2950]
+                      whitespace-nowrap
                       ${
                         active === item
-                          ? "border-3 border-[#447da6]"
-                          : "border-3 border-transparent"
+                          ? "border-2 md:border-3 border-[#447da6]"
+                          : "border-2 md:border-3 border-transparent"
                       }
                     `}
                   >

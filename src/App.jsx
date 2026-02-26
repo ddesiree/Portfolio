@@ -84,161 +84,125 @@ const App = () => {
 
 
   return (
-    <div section id="home" className="min-h-screen bg-[#ececf4] px-16 flex flex-col">
+    <div id="home" className="relative min-h-screen bg-[#ececf4] px-4 md:px-10 lg:px-16 flex flex-col overflow-x-hidden">
 
       <NavBar />
 
-      <div className="flex min-h-screen items-center justify-between">
+        <div className="flex flex-col-reverse md:flex-row items-center justify-center min-h-screen gap-10 md:gap-20 px-2">
+          {/* Text */}
+          <div className="flex flex-col gap-2 text-center md:text-left max-w-full md:max-w-lg md:ml-12">
+            <h1 className="text-2xl md:text-3xl text-[#1e2950]">Hi, I'm</h1>
+            
+            <p className="text-5xl md:text-9xl text-[#1e2950]"
+              style={{ fontFamily: 'Shrikhand, cursive' }}>
+              Desiree
+            </p>
+            <p className="text-sm md:text-lg text-[#1e2950]">
+              An aspiring <span className="font-bold">Data Scientist</span> creating visual analytics, dashboards, and intuitive frontend experiences.
+            </p>
 
-        <div className="flex flex-col gap-2 max-w-lg ml-60">
-
-          <h1 className="text-3xl text-[#1e2950]">Hi, I'm</h1>
-          <p className="text-9xl text-[#1e2950]" style={{ fontFamily: 'Shrikhand, cursive' }}>
-            Desiree
-          </p>
-          <p className="text-lg text-[#1e2950]">
-            An aspiring <span className="font-bold">Data Scientist</span> creating visual analytics, dashboards, and intuitive frontend experiences.
-          </p>
-
-          <div>
-            <button
-              onClick={() =>
-                aboutRef.current.scrollIntoView({ behavior: "smooth" })
-              }
-              className="
-                group relative
-                mt-3 px-1 py-2
-                bg-[#447da6] text-white
-                shadow-lg font-bold
-                rounded-full
-                inline-flex items-center justify-center
-                overflow-hidden
-                hover:bg-[#35648b]
-                transition-all duration-300
-                min-w-[230px]
-              "
-            >
-              <span
-                className="
-                  absolute
-                  transition-all duration-300
-                  group-hover:opacity-0
-                  group-hover:translate-x-4"
+            <div className="flex justify-center md:justify-start mt-3">
+              <button
+                onClick={() => aboutRef.current.scrollIntoView({ behavior: "smooth" })}
+                className="group relative px-4 py-2 bg-[#447da6] text-white shadow-lg font-bold rounded-full inline-flex items-center justify-center overflow-hidden hover:bg-[#35648b] transition-all duration-300 min-w-[230px]"
               >
-                Learn more about me
-              </span>
+                <span className="absolute transition-all duration-300 group-hover:opacity-0 group-hover:translate-x-4">
+                  Learn more about me
+                </span>
 
-              <img
-                src={rightArrow}
-                alt="arrow"
-                className="
-                  w-8 h-8
-                  opacity-0
-                  transition-all duration-300
-                  group-hover:opacity-100
-                "
-              />
-            </button>
+                <img
+                  src={rightArrow}
+                  alt="arrow"
+                  className="w-8 h-8 opacity-0 transition-all duration-300 group-hover:opacity-100"
+                />
+              </button>
+            </div>
           </div>
 
-
+          {/* Image */}
+          <img
+            src={frontpic}
+            alt="Front"
+            className="w-60 h-60 md:w-150 md:h-160 object-cover rounded-lg"
+          />
         </div>
-
-        <img 
-          src={frontpic} 
-          alt="Front" 
-          className="w-150 h-160 object-cover rounded-lg absolute right-10 top-[100px]" />
-      </div>
 
       {/* ABOUT ME SECTION */}
       <div id="about" className="mt-32 flex justify-center">
-        <div ref={aboutRef} className="mt-32 flex justify-center"></div>
+        <div ref={aboutRef}></div>
 
-        <div className="bg-[#f5f8fd] w-full max-w-8xl shadow-lg px-10 py-10 min-h-[130vh]">
-          <div className="flex items-start gap-13">
+        <div className="bg-[#f5f8fd] w-full max-w-8xl shadow-lg px-4 sm:px-10 py-6 sm:py-10 min-h-[130vh] mx-auto">
+          <div className="flex flex-col sm:flex-row items-start sm:gap-13">
             
             <div className="flex justify-center">
               <img src={aboutMe} alt="About Me"
                 className="w-96 h-130 shadow-2xs object-cover"/>
             </div>
 
-            <div className="flex-1 pr-6 flex flex-col items-start">
-              <h2 className="text-2xl text-[#1e2950] font-bold mb-6 border-[3px] border-[#447da6] 
-               rounded-full px-6 py-2 inline-block transition-transform duration-300 ease-out 
-               hover:scale-105">
+            <div className="flex-1 w-full sm:w-auto flex flex-col items-start">
+              <h2 className="mt-4 sm:mt-0 text-xl sm:text-2xl text-[#1e2950] font-bold mb-4 sm:mb-6 border-[3px] border-[#447da6] 
+                rounded-full px-4 py-1 sm:px-6 sm:py-2 inline-block transition-transform duration-300 ease-out 
+                hover:scale-105">
                 ABOUT ME
               </h2>
 
-              <p className="text-[#1e2950] text-1xl leading-relaxed text-justify">
+              <p className="text-sm sm:text-base md:text-sm text-[#1e2950] leading-relaxed text-justify mb-4 sm:mb-6">
                 My name is <span className="font-bold text-[#447da6]">Desiree Joice F. Boo</span>, a fourth-year <span className="font-bold text-[#447da6]">Bachelor of Science in Computer Science</span> student majoring 
                 in Data Science at the University of Southeastern Philippines. My academic journey has shaped a flexible skill 
                 set that moves between data analysis, machine learning, data visualization, frontend development, and UX 
                 design. 
                 <br /><br />
-                 <span className="text-[#447da6] italic">I transform data into visual analytics and ML-powered dashboards</span>, designing structured, user-centered 
-                 interfaces with clarity and balance. I adapt quickly to new tools and am seeking opportunities to grow as a 
-                 data scientist, contributing analytics-driven, well-designed solutions to real-world projects.
+                <span className="text-[#447da6] italic">I transform data into visual analytics and ML-powered dashboards</span>, designing structured, user-centered 
+                interfaces with clarity and balance. I adapt quickly to new tools and am seeking opportunities to grow as a 
+                data scientist, contributing analytics-driven, well-designed solutions to real-world projects.
               </p>
               
-              <div className="flex gap-75">
-                <p className="text-[#1e2950] text-1xl font-bold mt-20">Contact Me</p>
-                <p className="text-[#1e2950] text-1xl font-bold mt-20">Connect With Me</p>
-              </div>
+              <div className="flex flex-col md:flex-row md:items-start md:gap-20">
 
-              <div className="flex gap-20">
+                {/* Contact Me */}
+                <div className="flex flex-col gap-3">
+                  <p className="text-[#1e2950] text-xl font-bold">Contact Me</p>
 
-                <div className="flex flex-col gap-3 pl-4">
                   <div className="flex items-center gap-2">
-                    <img src={email} alt="Email" className="w-9 h-9 shadow-2xs object-cover mt-3"/>
-                    <p className="text-[#1e2950] text-1xl mt-3">desireejoice@gmail.com</p>
+                    <img src={email} alt="Email" className="w-9 h-9 object-cover"/>
+                    <p className="text-[#1e2950]">desireejoice@gmail.com</p>
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <img src={phoneCall} alt="Phone Call" className="w-9 h-9 shadow-2xs object-cover"/>
-                    <p className="text-[#1e2950] text-1xl">+63 935 749 8306</p>
+                    <img src={phoneCall} alt="Phone" className="w-9 h-9 object-cover"/>
+                    <p className="text-[#1e2950]">+63 935 749 8306</p>
                   </div>
                 </div>
 
-                <div className="border-l-2 border-[#1e2950]"></div>
+                {/* Divider (hidden on mobile) */}
+                <div className="hidden md:block border-l-2 border-[#1e2950] h-full"></div>
 
-                <div className="flex flex-col gap-3 pl-0">
-                  <a href="https://www.linkedin.com/in/desiree-joice-boo-1082183a4/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 hover:underline">
+                {/* Connect With Me */}
+                <div className="flex flex-col gap-3">
+                  <p className="text-[#1e2950] text-xl font-bold">Connect With Me</p>
 
-                    <img src={linkedin} alt="Linked In" className="w-9 h-9 shadow-2xs object-cover mt-3"/>
-                    <p className="text-[#1e2950] text-2xl mt-3">Linked In</p>
-                  </a>
+                  {/* Social grid */}
+                  <div className="grid grid-cols-2 gap-x-6 gap-y-3">
+                    <a href="https://www.linkedin.com/in/desiree-joice-boo-1082183a4/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:underline">
+                      <img src={linkedin} alt="LinkedIn" className="w-9 h-9"/>
+                      <span className="text-[#1e2950]">LinkedIn</span>
+                    </a>
 
-                  <a href="https://github.com/ddesiree"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 hover:underline">
+                    <a href="https://medium.com/@djfboo00089" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:underline">
+                      <img src={medium} alt="Medium" className="w-9 h-9"/>
+                      <span className="text-[#1e2950]">Medium</span>
+                    </a>
 
-                    <img src={github} alt="Github" className="w-9 h-9 shadow-2xs object-cover"/>
-                    <p className="text-[#1e2950] text-2xl">Github</p>
-                  </a>
-                </div>
+                    <a href="https://github.com/ddesiree" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:underline">
+                      <img src={github} alt="GitHub" className="w-9 h-9"/>
+                      <span className="text-[#1e2950]">GitHub</span>
+                    </a>
 
-                <div className="flex flex-col gap-3 pl-0">
-                  <a href="https://medium.com/@djfboo00089"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 hover:underline">
-
-                    <img src={medium} alt="Medium" className="w-9 h-9 shadow-2xs object-cover mt-3"/>
-                    <p className="text-[#1e2950] text-2xl mt-3">Medium</p>
-                  </a>
-
-                  <a href="https://www.facebook.com/desireejoice.boo"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 hover:underline">
-
-                    <img src={facebook} alt="Github" className="w-9 h-9 shadow-2xs object-cover"/>
-                    <p className="text-[#1e2950] text-2xl">Facebook</p>
-                  </a>
+                    <a href="https://www.facebook.com/desireejoice.boo" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:underline">
+                      <img src={facebook} alt="Facebook" className="w-9 h-9"/>
+                      <span className="text-[#1e2950]">Facebook</span>
+                    </a>
+                  </div>
                 </div>
 
               </div>
