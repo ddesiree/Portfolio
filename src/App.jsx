@@ -141,7 +141,7 @@ const App = () => {
 
             <div className="flex-1 w-full sm:w-auto flex flex-col items-start">
               <h2 className="mt-4 sm:mt-0 text-xl sm:text-2xl text-[#1e2950] font-bold mb-4 sm:mb-6 border-[3px] border-[#447da6] 
-                rounded-full px-4 py-1 sm:px-6 sm:py-2 inline-block transition-transform duration-300 ease-out 
+                rounded-full px-4 py-1 sm:px-6 sm:py-2 bg-white sm:bg-transparent inline-block transition-transform duration-300 ease-out 
                 hover:scale-105">
                 ABOUT ME
               </h2>
@@ -173,7 +173,7 @@ const App = () => {
                   </div>
                 </div>
 
-                <div className="hidden md:block border-l-2 border-[#04060c] h-full"></div>
+                <div className="hidden md:block border-l-2 border-[#1e2950] self-stretch"></div>
 
                 <div className="flex flex-col gap-3 mt-10 md:mt-0">
                   <p className="text-[#1e2950] text-1xl md:text-xl font-bold">Connect With Me</p>
@@ -251,13 +251,13 @@ const App = () => {
 
         <div className="relative z-10 w-full max-w-7xl">
           <div className="flex flex-col items-center text-center">
-            <h2 className="text-2xl text-[#1e2950] font-bold mb-5 border-[3px] border-[#447da6]
-                          bg-white rounded-full px-11 py-2 inline-block
-                          transition-transform duration-300 ease-out hover:scale-105">
+            <h2 className="mt-0 sm:mt-0 text-xl sm:text-2xl text-[#1e2950] font-bold mb-4 sm:mb-6 border-[3px] border-[#447da6] 
+                rounded-full px-6 py-1 sm:px-12 sm:py-2 bg-white inline-block transition-transform duration-300 ease-out 
+                hover:scale-105">
               SKILLS
             </h2>
 
-            <p className="text-1xl text-[#1e2950] max-w-7xl px-6 tracking-wide">
+            <p className="text-xs sm:text-base sm:text-1xl text-[#1e2950] max-w-7xl px-6 tracking-wide">
               I’ve always been drawn to website design and intuitive functionality. Through my Computer
               Science studies, I’ve been able to expand beyond design, developing strong skills in data
               analysis, system thinking, and problem-solving.
@@ -265,147 +265,283 @@ const App = () => {
             </p>
           </div>
 
-          <p className="mt-10 pl-6 text-2xl text-[#1e2950] font-bold text-left">
+          <p className="mt-10 pl-6 text-1xl md:text-2xl text-[#1e2950] font-bold text-left">
             SOFTWARE TOOLS
           </p>
 
-          <div className="flex flex-wrap gap-2 mt-1 ml-6 justify-center">
-            <div className="w-45 h-50 bg-[#f5f8fd] rounded-xl shadow-xl
-                            transform transition duration-300 ease-out
-                            hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]">
-              <img src={python} alt="python icon" className="w-40 h-40 ml-3"/>
-              <p className="text-2xl text-[#1e2950] font-bold pl-11">Python</p>
+          <div className="flex flex-wrap gap-2 mt-1 justify-center">
+            <div className="w-35 h-40 sm:w-45 sm:h-50 
+                bg-[#f5f8fd] rounded-xl shadow-xl
+                flex flex-col items-center justify-center
+                transform transition duration-300 ease-out
+                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
+                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
+                active:scale-105">
+              <img src={python} alt="python icon" className="w-30 h-30 sm:w-40 sm:h-40" />
+              <p className="text-base sm:text-2xl text-[#1e2950] font-bold mt-1">
+                Python
+              </p>
             </div>
 
-            <div className="w-45 h-50 bg-[#f5f8fd] rounded-xl shadow-xl
-                            transform transition duration-300 ease-out
-                            hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]">
-              <img src={Rlogo} alt="Rlogo" className="w-35 h-35 ml-4 mt-4"/>
-              <p className="text-1xl text-[#1e2950] font-bold pl-7 mt-2">R Programming</p>
+            <div className="w-35 h-40 sm:w-45 sm:h-50 
+                bg-[#f5f8fd] rounded-xl shadow-xl
+                flex flex-col items-center justify-center
+                transform transition duration-300 ease-out
+                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
+                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
+                active:scale-105">
+              <img src={Rlogo} alt="Rlogo" className="w-25 h-25 sm:w-35 sm:h-35"/>
+              <p className="text-[13px] sm:text-xl text-[#1e2950] font-bold mt-3">R Programming</p>
             </div>
 
-            <div className="w-45 h-50 bg-[#f5f8fd] rounded-xl shadow-xl
-                            transform transition duration-300 ease-out
-                            hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]">
-              <img src={Rshiny} alt="Rshiny" className="w-33 h-35 ml-6 mt-4"/>
-              <p className="text-2xl text-[#1e2950] font-bold pl-11 mt-2">R Shiny</p>
+            <div className="w-35 h-40 sm:w-45 sm:h-50 
+                bg-[#f5f8fd] rounded-xl shadow-xl
+                flex flex-col items-center justify-center
+                transform transition duration-300 ease-out
+                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
+                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
+                active:scale-105">
+              <img src={Rshiny} alt="Rshiny" className="w-25 h-28 sm:w-33 sm:h-35"/>
+              <p className="text-base sm:text-2xl text-[#1e2950] font-bold mt-1">R Shiny</p>
             </div>
 
-            <div className="w-45 h-50 bg-[#f5f8fd] rounded-xl shadow-xl
-                            transform transition duration-300 ease-out
-                            hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]">
-              <img src={html} alt="html" className="w-43 h-35 ml-2 mt-4"/>
-              <p className="text-2xl text-[#1e2950] font-bold pl-15 mt-2">HTML</p>
+            <div className="w-35 h-40 sm:w-45 sm:h-50 
+                bg-[#f5f8fd] rounded-xl shadow-xl
+                flex flex-col items-center justify-center
+                transform transition duration-300 ease-out
+                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
+                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
+                active:scale-105">
+              <img src={html} alt="html" className="w-33 h-27 sm:w-43 sm:h-35"/>
+              <p className="text-base sm:text-2xl text-[#1e2950] font-bold mt-1">HTML</p>
             </div>
 
-            <div className="w-45 h-50 bg-[#f5f8fd] rounded-xl shadow-xl
-                            transform transition duration-300 ease-out
-                            hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]">
-              <img src={css} alt="css" className="w-35 h-35 ml-5 mt-5"/>
-              <p className="text-2xl text-[#1e2950] font-bold pl-17 mt-2">CSS</p>
+            <div className="w-35 h-40 sm:w-45 sm:h-50 
+                bg-[#f5f8fd] rounded-xl shadow-xl
+                flex flex-col items-center justify-center
+                transform transition duration-300 ease-out
+                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
+                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
+                active:scale-105">
+              <img src={css} alt="css" className="w-28 h-27 sm:w-37 sm:h-35 mt-2"/>
+              <p className="text-base sm:text-2xl text-[#1e2950] font-bold mt-2">CSS</p>
             </div>
 
-            <div className="w-45 h-50 bg-[#f5f8fd] rounded-xl shadow-xl
-                            transform transition duration-300 ease-out
-                            hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]">
-              <img src={php} alt="php" className="w-35 h-35 ml-5 mt-5"/>
-              <p className="text-2xl text-[#1e2950] font-bold pl-17 mt-2">PHP</p>
+            <div className="w-35 h-40 sm:w-45 sm:h-50 
+                bg-[#f5f8fd] rounded-xl shadow-xl
+                flex flex-col items-center justify-center
+                transform transition duration-300 ease-out
+                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
+                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
+                active:scale-105">
+              <img src={php} alt="php" className="w-28 h-27 sm:w-35 sm:h-35 mt-5"/>
+              <p className="text-base sm:text-2xl text-[#1e2950] font-bold">PHP</p>
             </div>
 
-            <div className="w-45 h-50 bg-[#f5f8fd] rounded-xl shadow-xl
-                            transform transition duration-300 ease-out
-                            hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]">
-              <img src={react} alt="php" className="w-35 h-35 ml-5 mt-5"/>
-              <p className="text-2xl text-[#1e2950] font-bold pl-14 mt-2">React</p>
+            <div className="w-35 h-40 sm:w-45 sm:h-50 
+                bg-[#f5f8fd] rounded-xl shadow-xl
+                flex flex-col items-center justify-center
+                transform transition duration-300 ease-out
+                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
+                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
+                active:scale-105">
+              <img src={react} alt="php" className="w-28 h-27 sm:w-35 sm:h-35"/>
+              <p className="text-base sm:text-2xl text-[#1e2950] font-bold mt-3">React</p>
             </div>
 
-            <div className="w-45 h-50 bg-[#f5f8fd] rounded-xl shadow-xl
-                            transform transition duration-300 ease-out
-                            hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]">
-              <img src={chatgpt} alt="chatgpt" className="w-35 h-35 ml-5 mt-5"/>
-              <p className="text-2xl text-[#1e2950] font-bold pl-9 mt-2">ChatGPT</p>
+            <div className="w-35 h-40 sm:w-45 sm:h-50 
+                bg-[#f5f8fd] rounded-xl shadow-xl
+                flex flex-col items-center justify-center
+                transform transition duration-300 ease-out
+                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
+                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
+                active:scale-105">
+              <img src={chatgpt} alt="chatgpt" className="w-28 h-27 sm:w-35 sm:h-35 mt-1"/>
+              <p className="text-base sm:text-2xl text-[#1e2950] font-bold mt-3">ChatGPT</p>
             </div>
 
-            <div className="w-45 h-50 bg-[#f5f8fd] rounded-xl shadow-xl
-                            transform transition duration-300 ease-out
-                            hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]">
-              <img src={canva} alt="canva" className="w-35 h-35 ml-5 mt-5"/>
-              <p className="text-2xl text-[#1e2950] font-bold pl-13 mt-2">Canva</p>
+            <div className="w-35 h-40 sm:w-45 sm:h-50 
+                bg-[#f5f8fd] rounded-xl shadow-xl
+                flex flex-col items-center justify-center
+                transform transition duration-300 ease-out
+                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
+                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
+                active:scale-105">
+              <img src={canva} alt="canva" className="w-28 h-27 sm:w-35 sm:h-35 mt-1"/>
+              <p className="text-base sm:text-2xl text-[#1e2950] font-bold mt-3">Canva</p>
             </div>
 
-            <div className="w-45 h-50 bg-[#f5f8fd] rounded-xl shadow-xl
-                            transform transition duration-300 ease-out
-                            hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]">
-              <img src={figma} alt="figma" className="w-25 h-35 ml-10 mt-5"/>
-              <p className="text-2xl text-[#1e2950] font-bold pl-13 mt-2">Figma</p>
+            <div className="w-35 h-40 sm:w-45 sm:h-50 
+                bg-[#f5f8fd] rounded-xl shadow-xl
+                flex flex-col items-center justify-center
+                transform transition duration-300 ease-out
+                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
+                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
+                active:scale-105">
+              <img src={figma} alt="figma" className="w-20 h-25 sm:w-25 sm:h-35 mt-1"/>
+              <p className="text-base sm:text-2xl text-[#1e2950] font-bold mt-3">Figma</p>
             </div>
           </div>
 
-          <div className="flex flex-row gap-13 mt-5">
-            <p className="mt-10 pl-6 text-2xl text-[#1e2950] font-bold text-left">
-              KEY STRENGTHS
-            </p>
-            <p className="mt-10 pl-100 text-2xl text-[#1e2950] font-bold text-left">
-              SOFT SKILLS
-            </p>
-          </div>
+          <div className="flex flex-col md:flex-row gap-10 mt-10 px-6">
+            {/* SOFTWARE TOOLS */}
+            <div className="flex flex-col w-full md:w-1/2">
+              <p className="text-xl md:text-2xl text-[#1e2950] font-bold mb-4">
+                SOFTWARE TOOLS
+              </p>
 
-          <div className="flex flex-wrap gap-19 mt-1 ml-8 justify-baseline">
-            <div className="flex flex-wrap w-145 h-45 bg-[#f5f8fd] rounded-xl shadow-xl
-                            transform transition duration-300 ease-out hover:scale-105 
-                            hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]">
-              <div className="flex flex-col gap-10 pl-7 mt-10">
-                <span className="w-2 h-2 bg-[#1e2950] rounded-full mr-3"></span>
-                <span className="w-2 h-2 bg-[#1e2950] rounded-full mr-3"></span>
-                <span className="w-2 h-2 bg-[#1e2950] rounded-full mr-3"></span>
-              </div>
+              <div className="flex flex-wrap bg-[#f5f8fd] rounded-xl shadow-xl p-6
+                              transition duration-300 ease-out
+                              hover:scale-105 
+                              hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]">
 
-              <div className="flex flex-col gap-3 pl-3 mt-5">
-                <p className="text-[#1e2950] font-bold text-1xl mt-3">Data Analytics</p>
-                <p className="text-[#1e2950] font-bold text-1xl mt-3">Data Visualization</p>
-                <p className="text-[#1e2950] font-bold text-1xl mt-3">Research and Development</p>
-              </div>
+                <div className="flex flex-col">
+                  <div className="flex">
+                    <div className="flex flex-col items-center mr-4 mt-1">
+                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#1e2950] rounded-full"></div>
+                      <div className="w-[1px] sm:w-[2px] h-6 sm:h-8 bg-[#1e2950]"></div>
+                    </div>
+                    <p className="text-[#1e2950] font-semibold">
+                      Data Analytics
+                    </p>
+                  </div>
 
-              <div className="flex flex-col gap-10 pl-7 mt-10">
-                <span className="w-2 h-2 bg-[#1e2950] rounded-full mr-3"></span>
-                <span className="w-2 h-2 bg-[#1e2950] rounded-full mr-3"></span>
-                <span className="w-2 h-2 bg-[#1e2950] rounded-full mr-3"></span>
-              </div>
+                  <div className="flex">
+                    <div className="flex flex-col items-center mr-4 mt-1">
+                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#1e2950] rounded-full"></div>
+                      <div className="w-[1px] sm:w-[2px] h-6 sm:h-8 bg-[#1e2950]"></div>
+                    </div>
+                    <p className="text-[#1e2950] font-semibold">
+                      Data Visualization
+                    </p>
+                  </div>
 
-              <div className="flex flex-col gap-3 pl-3 mt-5">
-                <p className="text-[#1e2950] font-bold text-1xl mt-3">Machine Learning</p>
-                <p className="text-[#1e2950] font-bold text-1xl mt-3">UX Research</p>
-                <p className="text-[#1e2950] font-bold text-1xl mt-3">Prototyping</p>
+                  <div className="flex">
+                    <div className="flex flex-col items-center mr-4 mt-1">
+                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#1e2950] rounded-full"></div>
+                      <div className="block sm:hidden w-[1px] h-6 bg-[#1e2950]"></div>
+                    </div>
+                    <p className="text-[#1e2950] font-semibold">
+                      Research & Development
+                    </p>
+                  </div>
+
+                </div>
+
+                <div className="flex flex-col sm:ml-9">
+                  <div className="flex">
+                    <div className="flex flex-col items-center mr-4 mt-1">
+                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#1e2950] rounded-full"></div>
+                      <div className="w-[1px] sm:w-[2px] h-6 sm:h-8 bg-[#1e2950]"></div>
+                    </div>
+                    <p className="text-[#1e2950] font-semibold">
+                      Machine Learning
+                    </p>
+                  </div>
+
+                  <div className="flex">
+                    <div className="flex flex-col items-center mr-4 mt-1">
+                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#1e2950] rounded-full"></div>
+                      <div className="w-[1px] sm:w-[2px] h-6 sm:h-8 bg-[#1e2950]"></div>
+                    </div>
+                    <p className="text-[#1e2950] font-semibold">
+                      UX Research
+                    </p>
+                  </div>
+
+                  <div className="flex">
+                    <div className="flex flex-col items-center mr-4 mt-1">
+                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#1e2950] rounded-full"></div>
+                    </div>
+                    <p className="text-[#1e2950] font-semibold">
+                      Prototyping
+                    </p>
+                  </div>
+
+                </div>
+
               </div>
             </div>
 
-            <div className="flex flex-wrap w-145 h-45 bg-[#f5f8fd] rounded-xl shadow-xl
-                            transform transition duration-300 ease-out hover:scale-105 
-                            hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]">
-              <div className="flex flex-col gap-10 pl-7 mt-10">
-                <span className="w-2 h-2 bg-[#1e2950] rounded-full mr-3"></span>
-                <span className="w-2 h-2 bg-[#1e2950] rounded-full mr-3"></span>
-                <span className="w-2 h-2 bg-[#1e2950] rounded-full mr-3"></span>
-              </div>
+            {/* SOFT SKILLS */}
+            <div className="flex flex-col w-full md:w-1/2">
+              <p className="text-xl md:text-2xl text-[#1e2950] font-bold mb-4">
+                SOFT SKILLS
+              </p>
 
-              <div className="flex flex-col gap-3 pl-3 mt-5">
-                <p className="text-[#1e2950] font-bold text-1xl mt-3">Collaborative Teamwork</p>
-                <p className="text-[#1e2950] font-bold text-1xl mt-3">Organization Skills</p>
-                <p className="text-[#1e2950] font-bold text-1xl mt-3">Adaptability</p>
-              </div>
+              <div className="flex flex-wrap bg-[#f5f8fd] rounded-xl shadow-xl p-6
+                              transition duration-300 ease-out
+                              hover:scale-105 
+                              hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]">
 
-              <div className="flex flex-col gap-10 pl-7 mt-10">
-                <span className="w-2 h-2 bg-[#1e2950] rounded-full mr-3"></span>
-                <span className="w-2 h-2 bg-[#1e2950] rounded-full mr-3"></span>
-                <span className="w-2 h-2 bg-[#1e2950] rounded-full mr-3"></span>
-              </div>
+                <div className="flex flex-col">
+                  <div className="flex">
+                    <div className="flex flex-col items-center mr-4 mt-1">
+                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#1e2950] rounded-full"></div>
+                      <div className="w-[1px] sm:w-[2px] h-6 sm:h-8 bg-[#1e2950]"></div>
+                    </div>
+                    <p className="text-[#1e2950] font-semibold">
+                      Collaborative Teamwork
+                    </p>
+                  </div>
 
-              <div className="flex flex-col gap-3 pl-3 mt-5">
-                <p className="text-[#1e2950] font-bold text-1xl mt-3">Well Mannered</p>
-                <p className="text-[#1e2950] font-bold text-1xl mt-3">Effective Communication</p>
-                <p className="text-[#1e2950] font-bold text-1xl mt-3">Technical Documentation</p>
+                  <div className="flex">
+                    <div className="flex flex-col items-center mr-4 mt-1">
+                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#1e2950] rounded-full"></div>
+                      <div className="w-[1px] sm:w-[2px] h-6 sm:h-8 bg-[#1e2950]"></div>
+                    </div>
+                    <p className="text-[#1e2950] font-semibold">
+                      Organization Skills
+                    </p>
+                  </div>
+
+                  <div className="flex">
+                    <div className="flex flex-col items-center mr-4 mt-1">
+                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#1e2950] rounded-full"></div>
+                      <div className="block sm:hidden w-[1px] h-6 bg-[#1e2950]"></div>
+                    </div>
+                    <p className="text-[#1e2950] font-semibold">
+                      Adaptability
+                    </p>
+                  </div>
+
+                </div>
+
+                <div className="flex flex-col sm:ml-9">
+                  <div className="flex">
+                    <div className="flex flex-col items-center mr-4 mt-1">
+                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#1e2950] rounded-full"></div>
+                      <div className="w-[1px] sm:w-[2px] h-6 sm:h-8 bg-[#1e2950]"></div>
+                    </div>
+                    <p className="text-[#1e2950] font-semibold">
+                      Well Mannered
+                    </p>
+                  </div>
+
+                  <div className="flex">
+                    <div className="flex flex-col items-center mr-4 mt-1">
+                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#1e2950] rounded-full"></div>
+                      <div className="w-[1px] sm:w-[2px] h-6 sm:h-8 bg-[#1e2950]"></div>
+                    </div>
+                    <p className="text-[#1e2950] font-semibold">
+                      Effective Communication
+                    </p>
+                  </div>
+
+                  <div className="flex">
+                    <div className="flex flex-col items-center mr-4 mt-1">
+                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#1e2950] rounded-full"></div>
+                    </div>
+                    <p className="text-[#1e2950] font-semibold">
+                      Technical Documentation
+                    </p>
+                  </div>
+
+                </div>
+
               </div>
             </div>
+
           </div>
 
         </div>
