@@ -265,7 +265,7 @@ const App = () => {
             </p>
           </div>
 
-          <p className="mt-10 pl-6 text-1xl md:text-2xl text-[#1e2950] font-bold text-left">
+          <p className="text-xl md:text-2xl text-[#1e2950] font-bold mb-4 mt-10">
             SOFTWARE TOOLS
           </p>
 
@@ -384,17 +384,17 @@ const App = () => {
           </div>
 
           <div className="flex flex-col md:flex-row gap-10 mt-10 px-6">
-            {/* SOFTWARE TOOLS */}
+            {/* KEY STRENGTHS */}
             <div className="flex flex-col w-full md:w-1/2">
               <p className="text-xl md:text-2xl text-[#1e2950] font-bold mb-4">
-                SOFTWARE TOOLS
+                KEY STRENGTHS
               </p>
 
               <div className="flex flex-wrap bg-[#f5f8fd] rounded-xl shadow-xl p-6
-                              transition duration-300 ease-out
-                              hover:scale-105 
-                              hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]">
-
+                  transition-all duration-300 ease-out
+                  hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
+                  active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
+                  active:scale-105 outline-none">
                 <div className="flex flex-col">
                   <div className="flex">
                     <div className="flex flex-col items-center mr-4 mt-1">
@@ -470,9 +470,10 @@ const App = () => {
               </p>
 
               <div className="flex flex-wrap bg-[#f5f8fd] rounded-xl shadow-xl p-6
-                              transition duration-300 ease-out
-                              hover:scale-105 
-                              hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]">
+                transition duration-300 ease-out
+                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
+                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
+                active:scale-105">
 
                 <div className="flex flex-col">
                   <div className="flex">
@@ -553,16 +554,16 @@ const App = () => {
         <img src={gradient4} alt="gradient4" className="absolute left-285 w-90 h-120 top-664"/>
         <div className="bg-[#f5f8fd] w-full max-w-8xl shadow-lg px-10 py-10 min-h-[150vh]">
           <div className="flex items-center gap-4 mb-6">
-            <h2 className="text-2xl text-[#1e2950] font-bold mb-6 border-[3px] border-[#447da6] 
-              rounded-full px-6 py-2 inline-block transition-transform duration-300 ease-out 
-              hover:scale-105">
+            <h2 className="mt-0 sm:mt-0 text-xl sm:text-2xl text-[#1e2950] font-bold mb-4 sm:mb-2 border-[3px] border-[#447da6] 
+                rounded-full px-4 py-1 sm:px-9 sm:py-2 bg-white inline-block transition-transform duration-300 ease-out 
+                hover:scale-105">
               PROJECTS
             </h2>
-            <p className="text-[#1e2950] text-1xl mt-3">Here are some of my works:</p>
+            <p className="text-[#1e2950] text-xs sm:text-base mt-0">Here are some of my works:</p>
           </div>
 
           {/* Card Carousel */}
-          <div className="relative mt-15 flex items-center justify-center">
+          <div className="relative sm:mt-15 flex items-center justify-center">
 
             <div
               className="relative w-full h-[420px] flex items-center justify-center"
@@ -597,32 +598,32 @@ const App = () => {
                     className="absolute transition-all duration-500 ease-out"
                     style={{ transform, zIndex, opacity }}
                   >
-                    <div className="w-130 h-100 bg-white rounded-2xl overflow-hidden cursor-pointer
+                    <div className="w-[240px] h-[270px] sm:w-130 sm:h-100 bg-white rounded-2xl overflow-hidden cursor-pointer
                                     shadow-lg hover:shadow-[0_24px_48px_rgba(68,125,166,0.45)]
                                     hover:-translate-y-2 transition-all duration-300 ease-out">
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-60 object-cover"
+                        className="w-full h-30 sm:w-full sm:h-60 object-cover"
                       />
 
-                     <div className="p-4">
-                        <h3 className="text-xl font-bold text-[#1e2950] leading-tight">
+                     <div className="p-2 sm:p-4">
+                        <h3 className="text-sm sm:text-xl font-bold text-[#1e2950] leading-tight">
                           {project.title}
                         </h3>
 
-                        <span className="text-xs text-gray-500 leading-tight ml-1">
+                        <span className="text-[8px] sm:text-xs text-gray-500 leading-tight ml-1">
                           {project.role || ""}
                         </span>
 
-                        <p className="mt-0 text-[#1e2950] text-sm">
+                        <p className="mt-0 text-[#1e2950] text-[10px] sm:text-sm">
                           {project.desc}
                         </p>
 
                         <button 
                           onClick={() => window.open(project.link, "_blank")}
-                          className="mt-2 px-2 py-1.5 text-[#447da6] font-bold hover:underline
-                                    inline-flex items-center gap-1"
+                          className="sm:mt-2 sm:px-2 py-1.5 text-[#447da6] font-bold hover:underline
+                                    inline-flex items-center gap-1 text-xs sm:text-base"
                         >
                           View Prototype
                           <img src={diagonalArrow} alt="arrow" className="w-3 h-3"/>
@@ -637,59 +638,48 @@ const App = () => {
 
             {/* Controls */}
             <button
-              onClick={prevProject}
-              className="absolute left-15 bg-white rounded-full px-4 py-4 shadow-lg
+              onClick={nextProject}
+              className="absolute top-1/2 -translate-y-1/2 right-[-50px] sm:right-8 bg-white rounded-full px-3 py-3 sm:px-4 sm:py-4 shadow-lg
                         hover:scale-110 transition"
             >
-              <img src={leftArrow} alt="left arrow" className="w-6 h-6"/>
+              <img src={rightArrowblck} alt="right arrow black" className="w-4 h-4 sm:w-6 sm:h-6"/>
             </button>
 
             <button
-              onClick={nextProject}
-              className="absolute right-15 bg-white rounded-full px-4 py-4 shadow-lg
+              onClick={prevProject}
+              className="absolute top-1/2 -translate-y-1/2 left-[-50px] sm:left-8 bg-white rounded-full px-3 py-3 sm:px-4 sm:py-4 shadow-lg
                         hover:scale-110 transition"
             >
-              <img src={rightArrowblck} alt="right arrow black" className="w-6 h-6"/>
+              <img src={leftArrow} alt="left arrow" className="w-4 h-4 sm:w-6 sm:h-6"/>
             </button>
           </div>
 
           {/* BLOGS SECTION */}
-          <div className="mt-30 px-6 w-full">
+          <div className="sm:mt-30 px-6 w-full">
 
             {/* Title */}
-            <p className="text-2xl text-[#1e2950] font-bold mb-6 text-left">
+            <p className="text-2xl sm:text-2xl text-[#1e2950] font-bold mb-6 text-left">
               BLOGS:
             </p>
 
             {/* Scrollable Container */}
             <div
-              className="space-y-5 
-                        max-h-[320px] 
-                        overflow-y-auto 
-                        pr-2
-                        scrollbar-thin 
-                        scrollbar-thumb-[#447da6] 
-                        scrollbar-track-gray-200"
+              className="space-y-5 max-h-[320px] overflow-y-auto 
+                pr-2 scrollbar-thin scrollbar-thumb-[#447da6] 
+                scrollbar-track-gray-200"
             >
 
               {/* Blogs */}
-              <div className="flex items-center justify-between
-                              border-3 border-[#447da6]
-                              rounded-xl
-                              bg-white
-                              px-8 py-7
-                              shadow-lg
-
-                              hover:border-[#8bb8d9]
-
-                              transition-all duration-300 ease-out"
+              <div className="relative flex flex-col sm:flex-row border-3 border-[#447da6]
+                rounded-xl bg-white px-2 py-2 sm:px-8 sm:py-7 pb-16 sm:pb-7 shadow-lg hover:border-[#8bb8d9]
+                transition-all duration-300 ease-out"
               >
-                <div className="max-w-[75%]">
-                  <h3 className="font-bold text-2xl text-[#1e2950] mb-2">
+                <div className="max-w-full sm:max-w-[75%]">
+                  <h3 className="font-bold text-1xl sm:text-2xl text-[#1e2950] mb-2">
                     Put on Your War Paint! Conquering the Challenges of Research Publication
                   </h3>
 
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-[10px] sm:text-sm text-gray-600 leading-relaxed">
                     Title’s inspiration is from The Pheonix by Fall Out Boy btw. HI gois I hope 
                     you enjoy reading this.
                   </p>
@@ -697,32 +687,26 @@ const App = () => {
 
                 <button
                   onClick={() => window.open("https://medium.com/@djfboo00089/put-on-your-war-paint-conquering-the-challenges-of-research-publication-a0e05d739f88", "_blank")}
-                  className="bg-[#447da6] text-white text-bold text-sm font-medium px-4 py-2 
-                  inline-flex items-center gap-1 shadow-md shadow-[#afafaf] rounded-full 
-                  hover:bg-[#35668c] transition"
+                  className="absolute bottom-2 right-2 sm:bottom-15 sm:right-6 sm:mt-0 sm:ml-4
+                    bg-[#447da6] text-white font-medium text-sm px-4 py-2 sm:px-4 sm:py-2
+                    inline-flex items-center gap-1 shadow-md shadow-[#afafaf] rounded-full
+                    hover:bg-[#35668c] transition"
                 >
                   View More
                   <img src={diagonalArrowWhite} alt="arrow" className="w-4 h-4"/>
                 </button>
               </div>
 
-              <div className="flex items-center justify-between
-                              border-3 border-[#447da6]
-                              rounded-xl
-                              bg-white
-                              px-8 py-7
-                              shadow-lg
-
-                              hover:border-[#8bb8d9]
-
-                              transition-all duration-300 ease-out"
+              <div className="relative flex flex-col sm:flex-row border-3 border-[#447da6]
+                rounded-xl bg-white px-2 py-2 sm:px-8 sm:py-7 pb-16 sm:pb-7 shadow-lg hover:border-[#8bb8d9]
+                transition-all duration-300 ease-out"
               >
-                <div className="max-w-[75%]">
-                  <h3 className="font-bold text-2xl text-[#1e2950] mb-2">
+                <div className="max-w-full sm:max-w-[75%]">
+                  <h3 className="font-bold text-1xl sm:text-2xl text-[#1e2950] mb-2">
                     First Day Blues: God knows how I feel so out of place
                   </h3>
 
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-[10px] sm:text-sm text-gray-600 leading-relaxed">
                     Well, it’s interesting how I made it to my third year despite the lack of 
                     confidence I had in myself while taking this course. This is the first time 
                     I’ve ever admitted it outside of my subconscious and quiet thoughts. Nevertheless...
@@ -731,64 +715,52 @@ const App = () => {
 
                 <button
                   onClick={() => window.open("https://medium.com/@djfboo00089/god-knows-how-i-feel-so-out-of-place-63a2343af5f3", "_blank")}
-                  className="bg-[#447da6] text-white text-bold text-sm font-medium px-4 py-2 
-                  inline-flex items-center gap-1 shadow-md shadow-[#afafaf] rounded-full 
-                  hover:bg-[#35668c] transition"
+                  className="absolute bottom-2 right-2 sm:bottom-14 sm:right-6 sm:mt-0 sm:ml-4
+                    bg-[#447da6] text-white font-medium text-sm px-4 py-2 sm:px-4 sm:py-2
+                    inline-flex items-center gap-1 shadow-md shadow-[#afafaf] rounded-full
+                    hover:bg-[#35668c] transition"
                 >
                   View More
                   <img src={diagonalArrowWhite} alt="arrow" className="w-4 h-4"/>
-                </button>
+                </button> 
               </div>
 
-              <div className="flex items-center justify-between
-                              border-3 border-[#447da6]
-                              rounded-xl
-                              bg-white
-                              px-8 py-7
-                              shadow-lg
-
-                              hover:border-[#8bb8d9]
-
-                              transition-all duration-300 ease-out"
+              <div className="relative flex flex-col sm:flex-row border-3 border-[#447da6]
+                rounded-xl bg-white px-2 py-2 sm:px-8 sm:py-7 pb-16 sm:pb-7 shadow-lg hover:border-[#8bb8d9]
+                transition-all duration-300 ease-out"
               >
-                <div className="max-w-[75%]">
-                  <h3 className="font-bold text-2xl text-[#1e2950] mb-2">
+                <div className="max-w-full sm:max-w-[75%]">
+                  <h3 className="font-bold text-1xl sm:text-2xl text-[#1e2950] mb-2">
                     404: Sanity Not Found (A Data Scientist’s Life)
                   </h3>
 
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-[10px] sm:text-sm text-gray-600 leading-relaxed">
                     Hi! It’s me again, bear with me as I chatter through this blog again. Hope you enjoy!
                   </p>
                 </div>
 
                 <button
                   onClick={() => window.open("https://medium.com/@djfboo00089/404-sanity-not-found-a-data-scientists-life-dd7155e2890c", "_blank")}
-                  className="bg-[#447da6] text-white text-bold text-sm font-medium px-4 py-2 
-                  inline-flex items-center gap-1 shadow-md shadow-[#afafaf] rounded-full 
-                  hover:bg-[#35668c] transition"
+                  className="absolute bottom-2 right-2 sm:bottom-10 sm:right-6 sm:mt-0 sm:ml-4
+                    bg-[#447da6] text-white font-medium text-sm px-4 py-2 sm:px-4 sm:py-2
+                    inline-flex items-center gap-1 shadow-md shadow-[#afafaf] rounded-full
+                    hover:bg-[#35668c] transition"
                 >
                   View More
                   <img src={diagonalArrowWhite} alt="arrow" className="w-4 h-4"/>
                 </button>
               </div>
 
-              <div className="flex items-center justify-between
-                              border-3 border-[#447da6]
-                              rounded-xl
-                              bg-white
-                              px-8 py-7
-                              shadow-lg
-
-                              hover:border-[#8bb8d9]
-
-                              transition-all duration-300 ease-out"
+              <div className="relative flex flex-col sm:flex-row border-3 border-[#447da6]
+                rounded-xl bg-white px-2 py-2 sm:px-8 sm:py-7 pb-16 sm:pb-7 shadow-lg hover:border-[#8bb8d9]
+                transition-all duration-300 ease-out"
               >
-                <div className="max-w-[75%]">
-                  <h3 className="font-bold text-2xl text-[#1e2950] mb-2">
+                <div className="max-w-full sm:max-w-[75%]">
+                  <h3 className="font-bold text-1xl sm:text-2xl text-[#1e2950] mb-2">
                     Lost in the Literature? A Guide to Navigating the Research Maze
                   </h3>
 
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-[10px] sm:text-sm text-gray-600 leading-relaxed">
                     Pidro, a CS undergraduate student, was investigating the efficacy of online learning 
                     in higher education. He had to produce a thorough literature review as part of his 
                     thesis to lay the theoretical groundwork for his research...
@@ -797,9 +769,10 @@ const App = () => {
 
                 <button
                   onClick={() => window.open("https://medium.com/@djfboo00089/lost-in-the-literature-a-guide-to-navigating-the-research-maze-135f9e39291d", "_blank")}
-                  className="bg-[#447da6] text-white text-bold text-sm font-medium px-4 py-2 
-                  inline-flex items-center gap-1 shadow-md shadow-[#afafaf] rounded-full 
-                  hover:bg-[#35668c] transition"
+                  className="absolute bottom-2 right-2 sm:bottom-14 sm:right-6 sm:mt-0 sm:ml-4
+                    bg-[#447da6] text-white font-medium text-sm px-4 py-2 sm:px-4 sm:py-2
+                    inline-flex items-center gap-1 shadow-md shadow-[#afafaf] rounded-full
+                    hover:bg-[#35668c] transition"
                 >
                   View More
                   <img src={diagonalArrowWhite} alt="arrow" className="w-4 h-4"/>
@@ -808,7 +781,12 @@ const App = () => {
 
             </div>
 
-            
+          </div>
+
+          <div className="text-center mt-8 pb-1">
+            <p className="text-xs sm:text-sm text-gray-500">
+              © 2026 Desiree Joice Boo. All rights reserved.
+            </p>
           </div>
 
         </div>
