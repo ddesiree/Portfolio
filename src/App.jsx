@@ -551,8 +551,8 @@ const App = () => {
 
       {/* PROJECTS SECTION */}
       <div id="projects" className="mt-32 flex justify-center">
-        <img src={gradient4} alt="gradient4" className="absolute left-285 w-90 h-120 top-664"/>
-        <div className="bg-[#f5f8fd] w-full max-w-8xl shadow-lg px-10 py-10 min-h-[150vh]">
+        <div className="bg-[#f5f8fd] w-full max-w-8xl shadow-lg px-10 py-10 min-h-[150vh] relative">
+          <img src={gradient4} alt="gradient4" className="absolute top-0 right-0 w-90 h-120"/>
           <div className="flex items-center gap-4 mb-6">
             <h2 className="mt-0 sm:mt-0 text-xl sm:text-2xl text-[#1e2950] font-bold mb-4 sm:mb-2 border-[3px] border-[#447da6] 
                 rounded-full px-4 py-1 sm:px-9 sm:py-2 bg-white inline-block transition-transform duration-300 ease-out 
@@ -664,7 +664,7 @@ const App = () => {
 
             {/* Scrollable Container */}
             <div
-              className="space-y-5 max-h-[320px] overflow-y-auto 
+              className="space-y-5 max-h-[360px] overflow-y-auto 
                 pr-2 scrollbar-thin scrollbar-thumb-[#447da6] 
                 scrollbar-track-gray-200"
             >
@@ -687,7 +687,7 @@ const App = () => {
 
                 <button
                   onClick={() => window.open("https://medium.com/@djfboo00089/put-on-your-war-paint-conquering-the-challenges-of-research-publication-a0e05d739f88", "_blank")}
-                  className="absolute bottom-2 right-2 sm:bottom-15 sm:right-6 sm:mt-0 sm:ml-4
+                  className="absolute bottom-2 right-2 sm:bottom-14 sm:right-6 sm:mt-0 sm:ml-4
                     bg-[#447da6] text-white font-medium text-sm px-4 py-2 sm:px-4 sm:py-2
                     inline-flex items-center gap-1 shadow-md shadow-[#afafaf] rounded-full
                     hover:bg-[#35668c] transition"
