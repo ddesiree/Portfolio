@@ -101,7 +101,7 @@ const NavBar = () => {
               <li key={item}>
                 {isResume ? (
                   <a
-                    href="https://drive.google.com/file/d/1NDf0k9mig2D8vbrb3Qaw1uTZxBnfMlI1/view?usp=drive_link"
+                    href="https://drive.google.com/file/d/1W2MNqHvRfhq2s12nrer5a84PHoSyMYDQ/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="uppercase cursor-pointer rounded-full transition-all duration-300 ease-in-out px-3 md:px-4 py-1.5 md:py-2 bg-[#447da6] text-white text-[10px] md:text-sm whitespace-nowrap"
