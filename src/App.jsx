@@ -1,7 +1,6 @@
 import { useRef , useState} from "react";
 import NavBar from "./Components/NavBar"
 import frontpic from './assets/frontpic.png'
-import rightArrow from './assets/right-arrow.png';
 import leftArrow from './assets/left-arrow.png';
 import rightArrowblck from './assets/right-arrow-black.png';
 import aboutMe from './assets/about-me.jpg'
@@ -24,13 +23,16 @@ import html from './assets/html.png'
 import css from './assets/css.png'
 import php from './assets/php.png'
 import react from './assets/react.svg'
+import dart from './assets/dart.png'
 import chatgpt from './assets/chatgpt.png'
+import claude from './assets/claude.png'
 import canva from './assets/canva.png'
 import figma from './assets/figma.png'
 import project1 from './assets/project1.png'
 import project2 from './assets/project2.png'
 import project3 from './assets/project3.png'
 import project4 from './assets/project4.png'
+import project5 from './assets/project5.jpg'
 import diagonalArrow from './assets/diagonalArrow.png'
 import diagonalArrowWhite from './assets/arrow-diagonal.png'
 import { link } from "framer-motion/client";
@@ -38,8 +40,32 @@ import { link } from "framer-motion/client";
 const App = () => {
 
   const aboutRef = useRef(null);
+
+  const skills = [
+    { img: python, label: "Python", imgClass: "w-30 h-30 sm:w-40 sm:h-40" },
+    { img: Rlogo, label: "R Programming", imgClass: "w-25 h-25 sm:w-35 sm:h-35", textClass: "text-[13px] sm:text-xl mt-3" },
+    { img: Rshiny, label: "R Shiny", imgClass: "w-25 h-28 sm:w-33 sm:h-35" },
+    { img: html, label: "HTML", imgClass: "w-33 h-27 sm:w-43 sm:h-35" },
+    { img: css, label: "CSS", imgClass: "w-28 h-27 sm:w-37 sm:h-35 mt-2", textClass: "mt-2" },
+    { img: php, label: "PHP", imgClass: "w-28 h-27 sm:w-35 sm:h-35 mt-5" },
+    { img: react, label: "React", imgClass: "w-28 h-27 sm:w-35 sm:h-35", textClass: "mt-3" },
+    { img: dart, label: "Dart", imgClass: "w-28 h-27 sm:w-35 sm:h-35", textClass: "mt-3" },
+    { img: chatgpt, label: "ChatGPT", imgClass: "w-28 h-27 sm:w-35 sm:h-35 mt-1", textClass: "mt-3" },
+    { img: claude, label: "Claude", imgClass: "w-28 h-27 sm:w-35 sm:h-35 mt-1", textClass: "mt-3" },
+    { img: canva, label: "Canva", imgClass: "w-28 h-27 sm:w-35 sm:h-35 mt-1", textClass: "mt-3" },
+    { img: figma, label: "Figma", imgClass: "w-20 h-25 sm:w-25 sm:h-35 mt-1", textClass: "mt-3" },
+  ];
   
   const projects = [
+    {
+      title: "ToxiCrab Mobile App",
+      desc: "An AI powered mobile application that detets toxic and non-toxic crab.",
+      image: project5,
+      link: "https://drive.google.com/file/d/1qK45Mik_mzS0GMTrFkFsn3Fx0avrJfeQ/view?usp=sharing",
+      role: "Front-end Developer",
+      buttonLabel: "Download APK",
+      isDownload: true,
+    },
     {
       title: "Inflation & Rice Price Watch",
       desc: " The dashboard was developed to present an overview of rice inflation rates in the Philippines across various rice classifications.",
@@ -52,7 +78,7 @@ const App = () => {
       desc: "A prototype website was developed to identify common viral skin infections using machine learning–based image classification.",
       image: project2,
       link: "https://www.figma.com/proto/aHqYCWCsiFxnRQJfihrini/Viral-Skin-Infection-Identifier?node-id=1-2&p=f&t=eulzs0rTLoB1oOn6-1&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2",
-      role: "UI/UX Designer | Frontend Developer",
+      role: "UI/UX Designer | Front-end Developer",
     },
     {
       title: "Davao Jeepney Fare Guide",
@@ -104,17 +130,9 @@ const App = () => {
             <div className="flex justify-center md:justify-start mt-3">
               <button
                 onClick={() => aboutRef.current.scrollIntoView({ behavior: "smooth" })}
-                className="group relative px-4 py-2 bg-[#447da6] text-white shadow-lg font-bold rounded-full inline-flex items-center justify-center overflow-hidden hover:bg-[#35648b] transition-all duration-300 min-w-[230px]"
+                className="px-4 py-3 bg-[#447da6] text-white shadow-lg font-bold rounded-full inline-flex items-center justify-center gap-2 hover:bg-[#184163] hover:scale-110 hover:shadow-[0_10px_25px_rgba(68,125,166,0.6)] transition-all duration-300 min-w-[230px]"
               >
-                <span className="absolute transition-all duration-300 group-hover:opacity-0 group-hover:translate-x-4">
-                  Learn more about me
-                </span>
-
-                <img
-                  src={rightArrow}
-                  alt="arrow"
-                  className="w-8 h-8 opacity-0 transition-all duration-300 group-hover:opacity-100"
-                />
+                Learn more about me
               </button>
             </div>
           </div>
@@ -147,8 +165,8 @@ const App = () => {
               </h2>
 
               <p className="text-sm sm:text-base md:text-1xl text-[#1e2950] leading-relaxed text-justify mb-4 sm:mb-6">
-                My name is <span className="font-bold text-[#447da6]">Desiree Joice F. Boo</span>, a fourth-year <span className="font-bold text-[#447da6]">Bachelor of Science in Computer Science</span> student majoring 
-                in Data Science at the University of Southeastern Philippines. My academic journey has shaped a flexible skill 
+                My name is <span className="font-bold text-[#447da6]">Desiree Joice F. Boo</span>, a graduate of the <span className="font-bold text-[#447da6]">Bachelor of Science in Computer Science</span> majoring 
+                in <span className="font-bold text-[#447da6]">Data Science at the University of Southeastern Philippines.</span> My academic journey has shaped a flexible skill 
                 set that moves between data analysis, machine learning, data visualization, frontend development, and UX 
                 design. 
                 <br /><br />
@@ -270,117 +288,20 @@ const App = () => {
           </p>
 
           <div className="flex flex-wrap gap-2 mt-1 justify-center">
-            <div className="w-35 h-40 sm:w-45 sm:h-50 
-                bg-[#f5f8fd] rounded-xl shadow-xl
-                flex flex-col items-center justify-center
-                transform transition duration-300 ease-out
-                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
-                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
-                active:scale-105">
-              <img src={python} alt="python icon" className="w-30 h-30 sm:w-40 sm:h-40" />
-              <p className="text-base sm:text-2xl text-[#1e2950] font-bold mt-1">
-                Python
-              </p>
-            </div>
-
-            <div className="w-35 h-40 sm:w-45 sm:h-50 
-                bg-[#f5f8fd] rounded-xl shadow-xl
-                flex flex-col items-center justify-center
-                transform transition duration-300 ease-out
-                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
-                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
-                active:scale-105">
-              <img src={Rlogo} alt="Rlogo" className="w-25 h-25 sm:w-35 sm:h-35"/>
-              <p className="text-[13px] sm:text-xl text-[#1e2950] font-bold mt-3">R Programming</p>
-            </div>
-
-            <div className="w-35 h-40 sm:w-45 sm:h-50 
-                bg-[#f5f8fd] rounded-xl shadow-xl
-                flex flex-col items-center justify-center
-                transform transition duration-300 ease-out
-                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
-                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
-                active:scale-105">
-              <img src={Rshiny} alt="Rshiny" className="w-25 h-28 sm:w-33 sm:h-35"/>
-              <p className="text-base sm:text-2xl text-[#1e2950] font-bold mt-1">R Shiny</p>
-            </div>
-
-            <div className="w-35 h-40 sm:w-45 sm:h-50 
-                bg-[#f5f8fd] rounded-xl shadow-xl
-                flex flex-col items-center justify-center
-                transform transition duration-300 ease-out
-                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
-                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
-                active:scale-105">
-              <img src={html} alt="html" className="w-33 h-27 sm:w-43 sm:h-35"/>
-              <p className="text-base sm:text-2xl text-[#1e2950] font-bold mt-1">HTML</p>
-            </div>
-
-            <div className="w-35 h-40 sm:w-45 sm:h-50 
-                bg-[#f5f8fd] rounded-xl shadow-xl
-                flex flex-col items-center justify-center
-                transform transition duration-300 ease-out
-                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
-                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
-                active:scale-105">
-              <img src={css} alt="css" className="w-28 h-27 sm:w-37 sm:h-35 mt-2"/>
-              <p className="text-base sm:text-2xl text-[#1e2950] font-bold mt-2">CSS</p>
-            </div>
-
-            <div className="w-35 h-40 sm:w-45 sm:h-50 
-                bg-[#f5f8fd] rounded-xl shadow-xl
-                flex flex-col items-center justify-center
-                transform transition duration-300 ease-out
-                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
-                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
-                active:scale-105">
-              <img src={php} alt="php" className="w-28 h-27 sm:w-35 sm:h-35 mt-5"/>
-              <p className="text-base sm:text-2xl text-[#1e2950] font-bold">PHP</p>
-            </div>
-
-            <div className="w-35 h-40 sm:w-45 sm:h-50 
-                bg-[#f5f8fd] rounded-xl shadow-xl
-                flex flex-col items-center justify-center
-                transform transition duration-300 ease-out
-                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
-                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
-                active:scale-105">
-              <img src={react} alt="php" className="w-28 h-27 sm:w-35 sm:h-35"/>
-              <p className="text-base sm:text-2xl text-[#1e2950] font-bold mt-3">React</p>
-            </div>
-
-            <div className="w-35 h-40 sm:w-45 sm:h-50 
-                bg-[#f5f8fd] rounded-xl shadow-xl
-                flex flex-col items-center justify-center
-                transform transition duration-300 ease-out
-                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
-                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
-                active:scale-105">
-              <img src={chatgpt} alt="chatgpt" className="w-28 h-27 sm:w-35 sm:h-35 mt-1"/>
-              <p className="text-base sm:text-2xl text-[#1e2950] font-bold mt-3">ChatGPT</p>
-            </div>
-
-            <div className="w-35 h-40 sm:w-45 sm:h-50 
-                bg-[#f5f8fd] rounded-xl shadow-xl
-                flex flex-col items-center justify-center
-                transform transition duration-300 ease-out
-                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
-                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
-                active:scale-105">
-              <img src={canva} alt="canva" className="w-28 h-27 sm:w-35 sm:h-35 mt-1"/>
-              <p className="text-base sm:text-2xl text-[#1e2950] font-bold mt-3">Canva</p>
-            </div>
-
-            <div className="w-35 h-40 sm:w-45 sm:h-50 
-                bg-[#f5f8fd] rounded-xl shadow-xl
-                flex flex-col items-center justify-center
-                transform transition duration-300 ease-out
-                hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
-                active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
-                active:scale-105">
-              <img src={figma} alt="figma" className="w-20 h-25 sm:w-25 sm:h-35 mt-1"/>
-              <p className="text-base sm:text-2xl text-[#1e2950] font-bold mt-3">Figma</p>
-            </div>
+            {skills.map((skill, i) => (
+              <div key={i} className="w-35 h-40 sm:w-45 sm:h-50 
+                  bg-[#f5f8fd] rounded-xl shadow-xl
+                  flex flex-col items-center justify-center
+                  transform transition duration-300 ease-out
+                  hover:scale-105 hover:shadow-[0_10px_20px_rgba(68,125,166,0.6)]
+                  active:shadow-[0_0_25px_rgba(68,125,166,0.8)]
+                  active:scale-105">
+                <img src={skill.img} alt={skill.label} className={skill.imgClass} />
+                <p className={`text-base sm:text-2xl text-[#1e2950] font-bold mt-1 ${skill.textClass || ""}`}>
+                  {skill.label}
+                </p>
+              </div>
+            ))}
           </div>
 
           <div className="flex flex-col md:flex-row gap-10 mt-10 px-6">
@@ -621,11 +542,22 @@ const App = () => {
                         </p>
 
                         <button 
-                          onClick={() => window.open(project.link, "_blank")}
+                          onClick={() => {
+                            if (project.isDownload) {
+                              const a = document.createElement("a");
+                              a.href = project.link;
+                              a.download = ""; // browser will use the filename from the URL
+                              document.body.appendChild(a);
+                              a.click();
+                              a.remove();
+                            } else {
+                              window.open(project.link, "_blank");
+                            }
+                          }}
                           className="sm:mt-2 sm:px-2 py-1.5 text-[#447da6] font-bold hover:underline
                                     inline-flex items-center gap-1 text-xs sm:text-base"
                         >
-                          View Prototype
+                          {project.buttonLabel || "View Prototype"}
                           <img src={diagonalArrow} alt="arrow" className="w-3 h-3"/>
                         </button>
                       </div>
