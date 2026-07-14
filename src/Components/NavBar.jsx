@@ -84,14 +84,14 @@ const NavBar = () => {
   return (
     <nav
       className={`
-        absolute top-0 left-0 w-full flex justify-center
+        fixed top-0 left-0 w-full flex justify-center
         z-50
         transition-all duration-300 ease-in-out
         ${showNav ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-6 pointer-events-none"}
       `}
     >
 
-      <div className="mt-4 bg-[#ececf4]/80 backdrop-blur-md shadow-md rounded-full px-4 md:px-6 py-1.5 md:py-2">
+      <div className="mt-4 bg-[#101526]/80 backdrop-blur-md shadow-md rounded-full px-4 md:px-6 py-1.5 md:py-2">
         <ul className="flex flex-nowrap justify-center gap-2 md:gap-5 py-2 md:py-3 px-2 md:px-4 list-none text-[10px] md:text-sm">
           {navItems.map((item) => {
             const isResume = item === "Resume";
@@ -117,7 +117,7 @@ const NavBar = () => {
                       transition-all duration-300 ease-in-out
                       px-2 md:px-3
                       py-1 md:py-1.5
-                      text-[#1e2950]
+                      text-[#ececf4]
                       whitespace-nowrap
                       ${
                         active === item
